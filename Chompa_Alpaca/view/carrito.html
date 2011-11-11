@@ -1,0 +1,58 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chompa Alpaca</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div>
+            <form method="post" action="">
+                <table border="1">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                    </tr>
+                    <?php foreach($items as $producto){ ?>
+                    <tr>
+                        <td><?php echo $producto->get_nombre(); ?></td>
+                        <td><?php echo $producto->get_precio(); ?></td>
+                        <td><?php echo $cantidades[$producto->get_id()]; ?></td>
+                    </tr>
+                    <?php } ?>
+                        
+                </table>
+                <p>                  
+                    <a href="?op=volver">Volver</a>
+                </p>
+            </form>
+        </div>
+        <?php if( $cantidadAPedir != 0 ){ ?>
+        <div>
+            <table border="1">
+                    <tr>
+                        <th>Id</th>
+                        <th>Estado</th>
+                        <th>Fecha</th>
+                        <th>ProductoId</th>
+                        <th>Cantidad</th>
+                    </tr>
+                    <?php foreach($pedidos as $pedido){ ?>
+                    <tr>
+                        <td><?php echo $pedido->get_id(); ?></td>
+                        <td><?php echo $pedido->get_estado(); ?></td>
+                        <td><?php echo $pedido->get_fecha(); ?></td>
+                        <td><?php echo $pedido->get_productoId(); ?></td>
+                        <td><?php echo $cantidadAPedir; ?></td>
+                    </tr>
+                    <?php } ?>
+
+                </table>
+        </div>
+        <?php } ?>
+    </body>
+</html>
