@@ -7,11 +7,12 @@ and open the template in the editor.
     <head>
         <title>Chompa Alpaca</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="chompa.css" />
     </head>
     <body>
         <div>
             <h1>Carrito de Compras</h1>
-            <form method="post" action="">
+            <form method="post" action="pedidos.php">
                 <p>
                     <SELECT NAME="chompas" SIZE=1 > 
                         <OPTION VALUE="1">Office</OPTION>
@@ -23,18 +24,8 @@ and open the template in the editor.
                     </SELECT>
                     <input type="text" name="cantidad" maxlength="3" size="3" />
                 </p>
-                <p><input type="submit" value="Seleccionar" name="seleccionar"  /></p>
-                
-                
-                 <p>
-                Usuario: <input type="text" name="usuario" size="10"/>
-            </p>
-            <p>
-                Contraseña: <input type="password" name="contrasenha" size="4" maxlength="5"/>
-            </p>
-            <p>
-                <input type="submit" name="iniciar" value="Iniciar Sesión" />
-            </p>
+                <p><input type="submit" name="seleccionar" value="Seleccionar" /></p>
+                <p><a href="?op=volver">Volver</a></p>
             </form>
         </div>
     </body>

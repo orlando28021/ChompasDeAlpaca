@@ -7,11 +7,12 @@ and open the template in the editor.
     <head>
         <title>Chompa Alpaca</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="chompa.css" />
     </head>
     <body>
         <div>
             <form method="post" action="">
-                <table border="1">
+                <table>
                     <tr>
                         <th>Nombre</th>
                         <th>Precio</th>
@@ -26,33 +27,11 @@ and open the template in the editor.
                     <?php } ?>
                         
                 </table>
-                <p>                  
-                    <a href="?op=volver">Volver</a>
+                <p>
+                    
+                    <a href="view.php?op=volverCompra">Volver</a>
                 </p>
             </form>
         </div>
-        <?php if( $cantidadAPedir != 0 ){ ?>
-        <div>
-            <table border="1">
-                    <tr>
-                        <th>Id</th>
-                        <th>Estado</th>
-                        <th>Fecha</th>
-                        <th>ProductoId</th>
-                        <th>Cantidad</th>
-                    </tr>
-                    <?php foreach($pedidos as $pedido){ ?>
-                    <tr>
-                        <td><?php echo $pedido->get_id(); ?></td>
-                        <td><?php echo $pedido->get_estado(); ?></td>
-                        <td><?php echo $pedido->get_fecha(); ?></td>
-                        <td><?php echo $pedido->get_productoId(); ?></td>
-                        <td><?php echo $cantidadAPedir; ?></td>
-                    </tr>
-                    <?php } ?>
-
-                </table>
-        </div>
-        <?php } ?>
     </body>
 </html>
