@@ -19,17 +19,8 @@ class carrito {
     public function getCantidad(){
         return $this->cantidad;
     }
-    public function getTotal(){
-        $total = 0;
-        $this->array = unserialize($_SESSION['carro']);
-        foreach($this->array as $prod){
-        $total += $prod->get_precio();
-        }
-        return $total;
-    }
     
     public function getCarro(){
-        
         return $this->array;
     }
     

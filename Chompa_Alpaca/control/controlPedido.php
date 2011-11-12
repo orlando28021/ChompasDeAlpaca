@@ -7,7 +7,7 @@ class controlPedido {
         return $listar;
     }
     public function ingresar($estado,$fecha,$productoId){
-        $model = new Pedido($id="", $estado,$fecha,$productoId);
+        $model = new Pedido(NULL, $estado,$fecha,$productoId);
         $model->ingresar('pedido', $estado, $fecha, $productoId);
     }
 
