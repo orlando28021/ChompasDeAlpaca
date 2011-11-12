@@ -48,13 +48,9 @@ class Pedido {
         $sql = new SQL();
         $sql->addTable($table);
         $sql->setOpcion('insert');
-        //`id` ,`estado` ,`fecha` ,`idProducto`
         $sql->addInto('id'."`,`".'estado'."`,`".'fecha'."`,`".'idProducto');
         $sql->addValues('NULL'."','".$estado."','".$fecha."','".$productoId);
         Persistence::insertar($sql);
     }
 }
-
-$miPedido = new Pedido($id="", $estado="", $fecha="", $productoId="");
-$miPedido->ingresar('pedido',1,'2011-11-19',4);
 ?>
